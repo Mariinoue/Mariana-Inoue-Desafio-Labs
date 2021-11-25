@@ -1,22 +1,14 @@
 {
-  "name": "Mariana-Inoue-Desafio-Labs",
+  "name": "backend-labs",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Mariinoue/Mariana-Inoue-Desafio-Labs.git"
-  },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Mariinoue/Mariana-Inoue-Desafio-Labs/issues"
-  },
-  "homepage": "https://github.com/Mariinoue/Mariana-Inoue-Desafio-Labs#readme",
   "dependencies": {
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
