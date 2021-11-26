@@ -1,15 +1,15 @@
 const URL = `http://localhost:8000/deliveries`;
 
-function getDoctors() {
+function getDelivery() {
   fetch(URL)
     .then((resposta) => resposta.json())
     .then((data) => preencherDados(data))
     .catch((erro) => console.error(erro))
 }
 
-getDoctors();
+getDelivery();
 
-function favoriteDoctor() {}
+function favoriteDelivery() {}
 
 var listing_table = document.getElementById("tabela-lista-corpo");
 
@@ -37,6 +37,37 @@ function preencherDados(lista) {
     let itemDaLinhaPeso = document.createElement("td");
     itemDaLinhaPeso.innerHTML = element.peso;
     let itemDaLinhaDelete = document.createElement("td");
+
+    
+
+
+        let cliente = document.getElementById('cliente').value
+        let endereco= document.getElementById('delivery-endereco').value
+        let telefone= document.getElementById('delivery-telefone').value
+        let peso= document.getElementById('delivery-peso').value
+
+    const btnAdd = document.getElementById('btnAddCadastro')
+    btnAdd.addEventListener('click', (e) => {
+    e.preventDefault();
+        fetch(`http://localhost:8000/deliveries`, {
+            method: 'POST',
+            body: JSON.stringify({
+                cliente:cliente,
+                endereco:endereco,
+                telefone:telefone,
+                peso:peso
+            }),
+            headers:{
+                'Content-Type':'application/json; charset= UTF-8'
+            }
+        })
+        .then(function(response){
+            return response.json()
+        })
+        .then(function(data){
+            location.reload()
+        })
+    })
 
 
     const buttonDel = document.createElement("button");

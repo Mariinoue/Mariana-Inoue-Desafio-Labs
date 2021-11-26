@@ -23,34 +23,39 @@
 
 <div class="container">
     <h1> Delivery</h1>
+    
+     
 
-    <div class='card'>
+      <div class='card'>
+        <form id='form' method='post'>
+          <div class='lineInput'>
+              <label>Nome Cliente</label>
+              <input type="text" id="cliente" placeholder="Nome completo" />
+          </div>
+    
+          <div class='lineInput'>
+              <label>Endereço</label>
+              <input type="text" id="delivery-endereco" placeholder="Endereço completo"/>
+          </div>
+    
+          <div class='lineInput'>
+              <label>Telefone</label>
+              <input type="tel"  id="delivery-telefone" placeholder="Numero de telefone"/>
+          </div>
+    
+          <div class='lineInput'>
+              <label>Peso</label>
+              <input type="number" id="delivery-peso" placeholder="Peso em kg"/>
+          </div>
+    
+          <button id="btnAddCadastro" type="submit">Cadastrar</button>
+    
+          <button id="btnAddDelete">Deletar</button>
+       </form> 
+    </div>  
+    
 
-      <div class='lineInput'>
-          <label>Nome Cliente</label>
-          <input type="text" id="id-cliente" placeholder="Nome completo" />
-      </div>
-
-      <div class='lineInput'>
-          <label>Endereço</label>
-          <input type="text" id="delivery-endereco" placeholder="Endereço completo"/>
-      </div>
-
-      <div class='lineInput'>
-          <label>Telefone</label>
-          <input type="tel"  id="delivery-telefone" placeholder="Numero de telefone"/>
-      </div>
-
-      <div class='lineInput'>
-          <label>Peso</label>
-          <input type="number" id="delivery-peso" placeholder="Peso em kg"/>
-      </div>
-
-      <button id="btnAddCadastro">Cadastrar</button>
-
-      <button id="btnAddDelete">Deletar</button>
-
-  </div>    
+      
 
      <table id="tabela-lista">
     </div>
