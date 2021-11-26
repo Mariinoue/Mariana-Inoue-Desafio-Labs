@@ -39,24 +39,25 @@ function preencherDados(lista) {
     let itemDaLinhaDelete = document.createElement("td");
 
     
-
-
-        let cliente = document.getElementById('cliente').value
-        let endereco= document.getElementById('delivery-endereco').value
-        let telefone= document.getElementById('delivery-telefone').value
-        let peso= document.getElementById('delivery-peso').value
+    const novoCadastro= ()=>{
+        const deliveryNomeElement = document.getElementById('delivery-nome-cliente')
+        const deliveryEnderecoElement = document.getElementById('delivery-endereco')
+        const deliveryTelefoneElement = document.getElementById('delivery-telefone')
+        const deliveryPesoElement = document.getElementById('delivery-peso')
+    
+        const delivery ={
+            nome: deliveryNomeElement.value, 
+            endereco: deliveryEnderecoElement.value,
+            telefone: deliveryTelefoneElement.value,
+            peso: Number(deliveryPesoElement.value) 
+        }
 
     const btnAdd = document.getElementById('btnAddCadastro')
     btnAdd.addEventListener('click', (e) => {
     e.preventDefault();
         fetch(`http://localhost:8000/deliveries`, {
             method: 'POST',
-            body: JSON.stringify({
-                cliente:cliente,
-                endereco:endereco,
-                telefone:telefone,
-                peso:peso
-            }),
+            body: JSON.stringify(delivery) ,
             headers:{
                 'Content-Type':'application/json; charset= UTF-8'
             }
@@ -65,10 +66,14 @@ function preencherDados(lista) {
             return response.json()
         })
         .then(function(data){
-            location.reload()
+            console.log(data)
+
+            const results =document.getElementById('results')
+
+            
         })
     })
-
+}
 
     const buttonDel = document.createElement("button");
     buttonDel.addEventListener("click", function () {
