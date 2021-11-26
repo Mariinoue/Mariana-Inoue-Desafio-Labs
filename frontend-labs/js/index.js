@@ -1,3 +1,8 @@
+const nomeInput = document.getElementById('cliente');
+const enderecoInput = document.getElementById('delivery-endereco');
+const telefoneInput = document.getElementById('delivery-endereco');
+const pesoInput = document.getElementById('delivery-peso');
+
 const URL = `http://localhost:8000/deliveries`;
 
 function getDelivery() {
@@ -39,25 +44,49 @@ function preencherDados(lista) {
     let itemDaLinhaDelete = document.createElement("td");
 
     
-    const novoCadastro= ()=>{
-        const deliveryNomeElement = document.getElementById('delivery-nome-cliente')
-        const deliveryEnderecoElement = document.getElementById('delivery-endereco')
-        const deliveryTelefoneElement = document.getElementById('delivery-telefone')
-        const deliveryPesoElement = document.getElementById('delivery-peso')
+    // const novoCadastro= ()=>{
+    //     const deliveryNomeElement = document.getElementById('delivery-nome-cliente')
+    //     const deliveryEnderecoElement = document.getElementById('delivery-endereco')
+    //     const deliveryTelefoneElement = document.getElementById('delivery-telefone')
+    //     const deliveryPesoElement = document.getElementById('delivery-peso')
     
-        const delivery ={
-            nome: deliveryNomeElement.value, 
-            endereco: deliveryEnderecoElement.value,
-            telefone: deliveryTelefoneElement.value,
-            peso: Number(deliveryPesoElement.value) 
-        }
+    //     const delivery ={
+    //         nome: deliveryNomeElement.value, 
+    //         endereco: deliveryEnderecoElement.value,
+    //         telefone: deliveryTelefoneElement.value,
+    //         peso: Number(deliveryPesoElement.value) 
+    //     }
+
+  // const btnAdd = document.getElementById('btnAddCadastro')
+  // btnAdd.addEventListener('click', (e) => {
+  // e.preventDefault();
+  //   fetch(`${URL}`, {
+  //     method: 'post',
+  //     body: JSON.stringify({
+  //       nome: form.cliente.value, 
+  //       endereço: form.endereco.value,
+  //       telefone: form.telefone.value,
+  //       peso: form.peso.value})
+  //   }).then(function(response) {
+  //     return response.json();
+  //   }).then(function(data){
+  //         console.log(data)
+
+  //   })
+  // })
+
 
     const btnAdd = document.getElementById('btnAddCadastro')
     btnAdd.addEventListener('click', (e) => {
     e.preventDefault();
         fetch(`http://localhost:8000/deliveries`, {
             method: 'POST',
-            body: JSON.stringify(delivery) ,
+            body: JSON.stringify({ 
+            nome: nomeInput.value,
+            endereco:enderecoInput.value, 
+            telefone:telefoneInput.value,
+            peso:pesoInput.value
+              }) ,
             headers:{
                 'Content-Type':'application/json; charset= UTF-8'
             }
@@ -68,12 +97,10 @@ function preencherDados(lista) {
         .then(function(data){
             console.log(data)
 
-            const results =document.getElementById('results')
-
             
         })
     })
-}
+
 
     const buttonDel = document.createElement("button");
     buttonDel.addEventListener("click", function () {
