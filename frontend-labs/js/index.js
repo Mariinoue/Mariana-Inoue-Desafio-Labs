@@ -43,7 +43,7 @@ function preencherDados(lista) {
     itemDaLinhaPeso.innerHTML = element.peso;
     let itemDaLinhaDelete = document.createElement("td");
 
-    
+    //POST
     // const novoCadastro= ()=>{
     //     const deliveryNomeElement = document.getElementById('delivery-nome-cliente')
     //     const deliveryEnderecoElement = document.getElementById('delivery-endereco')
