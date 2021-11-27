@@ -3,7 +3,7 @@ const enderecoInput = document.getElementById('delivery-endereco');
 const telefoneInput = document.getElementById('delivery-endereco');
 const pesoInput = document.getElementById('delivery-peso');
 
-const URL = `http://localhost:8000/deliveries`;
+const URL = `https://mariana-inoue-database.herokuapp.com/deliveries`;
 
 function getDelivery() {
   fetch(URL)
@@ -79,7 +79,7 @@ function preencherDados(lista) {
     const btnAdd = document.getElementById('btnAddCadastro')
     btnAdd.addEventListener('click', (e) => {
     e.preventDefault();
-        fetch(`http://localhost:8000/deliveries`, {
+        fetch(`https://mariana-inoue-database.herokuapp.com/deliveries`, {
             method: 'POST',
             body: JSON.stringify({ 
             nome: nomeInput.value,
