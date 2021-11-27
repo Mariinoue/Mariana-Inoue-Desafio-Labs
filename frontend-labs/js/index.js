@@ -79,7 +79,7 @@ function preencherDados(lista) {
     const btnAdd = document.getElementById('btnAddCadastro')
     btnAdd.addEventListener('click', (e) => {
     e.preventDefault();
-        fetch(`https://mariana-inoue-database.herokuapp.com/deliveries`, {
+        fetch(`${URL}`, {
             method: 'POST',
             body: JSON.stringify({ 
             nome: nomeInput.value,
