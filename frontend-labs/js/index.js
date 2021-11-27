@@ -1,9 +1,9 @@
-const nomeInput = document.getElementById('cliente');
-const enderecoInput = document.getElementById('delivery-endereco');
-const telefoneInput = document.getElementById('delivery-endereco');
-const pesoInput = document.getElementById('delivery-peso');
+const nomeInput = document.getElementById('cliente')
+const enderecoInput = document.getElementById('delivery-endereco')
+const telefoneInput = document.getElementById('delivery-endereco')
+const pesoInput = document.getElementById('delivery-peso')
 
-const URL = `https://mariana-inoue-database.herokuapp.com/deliveries`;
+const URL = `https://mariana-inoue-database.herokuapp.com/deliveries`
 
 function getDelivery() {
   fetch(URL)
@@ -30,53 +30,20 @@ function createButtonFavorite(favorite) {
 
 function preencherDados(lista) {
   lista.forEach((element, index) => {
-    let linha = document.createElement("tr");
-    let itemDaLinhaId = document.createElement("td");
-    itemDaLinhaId.innerText = element.id;
+    let linha = document.createElement("tr")
+    let itemDaLinhaId = document.createElement("td")
+    itemDaLinhaId.innerText = element.id
     let itemDaLinhaNome = document.createElement("td");
-    itemDaLinhaNome.innerText = element.nome;
-    let itemDaLinhaEndereco = document.createElement("td");
-    itemDaLinhaEndereco .innerText = element.endereco;
-    let itemDaLinhaTelefone = document.createElement("td");
+    itemDaLinhaNome.innerText = element.nome
+    let itemDaLinhaEndereco = document.createElement("td")
+    itemDaLinhaEndereco .innerText = element.endereco
+    let itemDaLinhaTelefone = document.createElement("td")
     itemDaLinhaTelefone.innerText = element.telefone;
-    let itemDaLinhaPeso = document.createElement("td");
-    itemDaLinhaPeso.innerHTML = element.peso;
-    let itemDaLinhaDelete = document.createElement("td");
+    let itemDaLinhaPeso = document.createElement("td")
+    itemDaLinhaPeso.innerHTML = element.peso
+    let itemDaLinhaDelete = document.createElement("td")
 
-    //POST
-    // const novoCadastro= ()=>{
-    //     const deliveryNomeElement = document.getElementById('delivery-nome-cliente')
-    //     const deliveryEnderecoElement = document.getElementById('delivery-endereco')
-    //     const deliveryTelefoneElement = document.getElementById('delivery-telefone')
-    //     const deliveryPesoElement = document.getElementById('delivery-peso')
-    
-    //     const delivery ={
-    //         nome: deliveryNomeElement.value, 
-    //         endereco: deliveryEnderecoElement.value,
-    //         telefone: deliveryTelefoneElement.value,
-    //         peso: Number(deliveryPesoElement.value) 
-    //     }
-
-  // const btnAdd = document.getElementById('btnAddCadastro')
-  // btnAdd.addEventListener('click', (e) => {
-  // e.preventDefault();
-  //   fetch(`${URL}`, {
-  //     method: 'post',
-  //     body: JSON.stringify({
-  //       nome: form.cliente.value, 
-  //       endereço: form.endereco.value,
-  //       telefone: form.telefone.value,
-  //       peso: form.peso.value})
-  //   }).then(function(response) {
-  //     return response.json();
-  //   }).then(function(data){
-  //         console.log(data)
-
-  //   })
-  // })
-
-
-    const btnAdd = document.getElementById('btnAddCadastro')
+  const btnAdd = document.getElementById('btnAddCadastro')
     btnAdd.addEventListener('click', (e) => {
     e.preventDefault();
         fetch(`${URL}`, {
@@ -102,7 +69,7 @@ function preencherDados(lista) {
     })
 
 
-    const buttonDel = document.createElement("button");
+    const buttonDel = document.createElement("button")
     buttonDel.addEventListener("click", function () {
       fetch(`${URL}/${element.id}`, {
         method: "DELETE",
@@ -110,22 +77,22 @@ function preencherDados(lista) {
         .then((resposta) => resposta.json())
         .then((data) => {
           var i = this.parentNode.parentNode.rowIndex;
-          document.getElementById("tabela-lista").deleteRow(i);
+          document.getElementById("tabela-lista").deleteRow(i)
         })
-        .catch((erro) => console.error(erro));
+        .catch((erro) => console.error(erro))
     });
 
-    let deleteIcon = document.createElement("i");
-    deleteIcon.className = "far fa-trash-alt";
+    let deleteIcon = document.createElement("i")
+    deleteIcon.className = "far fa-trash-alt"
     buttonDel.appendChild(deleteIcon);
-    itemDaLinhaDelete.appendChild(buttonDel);
+    itemDaLinhaDelete.appendChild(buttonDel)
 
-    linha.appendChild(itemDaLinhaId);
-    linha.appendChild(itemDaLinhaNome);
-    linha.appendChild(itemDaLinhaEndereco);
-    linha.appendChild(itemDaLinhaTelefone);
-    linha.appendChild(itemDaLinhaPeso);
-    linha.appendChild(itemDaLinhaDelete);
-    listing_table.appendChild(linha);
+    linha.appendChild(itemDaLinhaId)
+    linha.appendChild(itemDaLinhaNome)
+    linha.appendChild(itemDaLinhaEndereco)
+    linha.appendChild(itemDaLinhaTelefone)
+    linha.appendChild(itemDaLinhaPeso)
+    linha.appendChild(itemDaLinhaDelete)
+    listing_table.appendChild(linha)
   });
 }

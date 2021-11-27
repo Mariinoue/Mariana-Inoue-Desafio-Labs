@@ -1,35 +1,34 @@
 const Delivery = require('../models/delivery') 
 // const tabelaDeliveries = Delivery.delivery
 
-// GET _ Listar as entregas salvas previamente no banco de dados
-// GET /deliveries 
-// A requisição GET para /deliveries 
-// deve trazer um JSON com as informações das deliveries que existem no 
-// const getAllDeliveries = (req, res) => {
-
-//     res.status(200).send(deliveriesController)
-// }
-
-// // POST - Cadastrar novas entregas no formulário, e ao salvar, 
-// //atualizar o banco de dados e a lista com os dados da nova entrega; 
-// // POST /deliveries 
-// // Você deve fazer um cadastro de entregas, que terá os seguintes campos: 
-// // 1. Nome do cliente 
-// // 2. Peso em kg 
-// // 3. Endereço 
-// // 4. Telefone 
-
-const createDelivery = async(req, res) => {
+const createDelivery=async(req,res)=>{
     const { nome, endereco, peso, telefone } = req.body
 
-    try {
-        const delivery = await Delivery.create({ nome, endereco, peso, telefone })
-        console.log(`Delivery ${delivery.nome} criado`)
-        res.status(201).send(delivery)
-    }catch(error) {
-        res.status(500).send({ message: error.message})
+    const diretorJaExiste=await Diretor.findOne({ nome, endereco, peso, telefone })
+    if(diretorJaExiste){
+        return res.status(409).json({error:'Diretor ja cadastrado'})
     }
+    try{
+        const novoDiretor=await diretor.save()
+        res.status(201).json(novoDiretor)
+
+    }catch(err){
+        res.status(400).json({ message:err.message })
+    }
+
 }
+
+// const createDelivery = async(req, res) => {
+//     const { nome, endereco, peso, telefone } = req.body
+
+//     try {
+//         const delivery = await Delivery.create({ nome, endereco, peso, telefone })
+//         console.log(`Delivery ${delivery.nome} criado`)
+//         res.status(201).send(delivery)
+//     }catch(error) {
+//         res.status(500).send({ message: error.message})
+//     }
+// }
 
 const getAllDeliveries = async(req, res) => {
     try{
