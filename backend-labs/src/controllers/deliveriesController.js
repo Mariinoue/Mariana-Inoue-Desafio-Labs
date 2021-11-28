@@ -1,34 +1,37 @@
 const Delivery = require('../models/delivery') 
 // const tabelaDeliveries = Delivery.delivery
 
-const createDelivery=async(req,res)=>{
+// const createDelivery=async(req,res)=>{
+//     const { nome } = req.body
+
+    
+//     try{
+
+//         const DeliveryJaExiste=await Delivery.findOne( {where: { nome }})
+//             if(DeliveryJaExiste){
+        
+//         return res.status(409).json({error:'Delivery ja cadastrado'})
+//             }else{
+//         const novoDelivery=await delivery.save()
+//         res.status(201).json(novoDelivery)
+//         }
+//     }catch(err){
+//         res.status(400).json({ message:err.message })
+//     }
+
+// }
+
+const createDelivery = async(req, res) => {
     const { nome, endereco, peso, telefone } = req.body
 
-    const diretorJaExiste=await Diretor.findOne({ nome, endereco, peso, telefone })
-    if(diretorJaExiste){
-        return res.status(409).json({error:'Diretor ja cadastrado'})
+    try {
+        const delivery = await Delivery.create({ nome, endereco, peso, telefone })
+        console.log(`Delivery ${delivery.nome} criado`)
+        res.status(201).send(delivery)
+    }catch(error) {
+        res.status(500).send({ message: error.message})
     }
-    try{
-        const novoDiretor=await diretor.save()
-        res.status(201).json(novoDiretor)
-
-    }catch(err){
-        res.status(400).json({ message:err.message })
-    }
-
 }
-
-// const createDelivery = async(req, res) => {
-//     const { nome, endereco, peso, telefone } = req.body
-
-//     try {
-//         const delivery = await Delivery.create({ nome, endereco, peso, telefone })
-//         console.log(`Delivery ${delivery.nome} criado`)
-//         res.status(201).send(delivery)
-//     }catch(error) {
-//         res.status(500).send({ message: error.message})
-//     }
-// }
 
 const getAllDeliveries = async(req, res) => {
     try{

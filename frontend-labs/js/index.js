@@ -1,3 +1,4 @@
+
 const nomeInput = document.getElementById('cliente')
 const enderecoInput = document.getElementById('delivery-endereco')
 const telefoneInput = document.getElementById('delivery-endereco')
@@ -16,16 +17,16 @@ getDelivery();
 
 function favoriteDelivery() {}
 
-var listing_table = document.getElementById("tabela-lista-corpo");
+var listing_table = document.getElementById('tabela-lista-corpo')
 
-listing_table.innerHTML = "";
+listing_table.innerHTML = ""
 
 function createButtonFavorite(favorite) {
-  const buttonFav = document.createElement("button");
-  let favoriteIcon = document.createElement("i");
-  favoriteIcon.className = "far fa-star";
-  buttonFav.innerHTML = favoriteIcon;
-  document.body.appendChild(buttonFav);
+  const buttonFav = document.createElement("button")
+  let favoriteIcon = document.createElement("i")
+  favoriteIcon.className = "far fa-star"
+  buttonFav.innerHTML = favoriteIcon
+  document.body.appendChild(buttonFav)
 }
 
 function preencherDados(lista) {
@@ -43,9 +44,10 @@ function preencherDados(lista) {
     itemDaLinhaPeso.innerHTML = element.peso
     let itemDaLinhaDelete = document.createElement("td")
 
+
   const btnAdd = document.getElementById('btnAddCadastro')
     btnAdd.addEventListener('click', (e) => {
-    e.preventDefault();
+    e.preventDefault()
         fetch(`${URL}`, {
             method: 'POST',
             body: JSON.stringify({ 
@@ -59,15 +61,16 @@ function preencherDados(lista) {
             }
         })
         .then(function(response){
+          console.log(response);
             return response.json()
-        })
+         })
         .then(function(data){
             console.log(data)
-
-            
         })
+        .then(() => location.reload())
+      
     })
-
+ 
 
     const buttonDel = document.createElement("button")
     buttonDel.addEventListener("click", function () {
@@ -94,5 +97,6 @@ function preencherDados(lista) {
     linha.appendChild(itemDaLinhaPeso)
     linha.appendChild(itemDaLinhaDelete)
     listing_table.appendChild(linha)
-  });
+  })
 }
+
