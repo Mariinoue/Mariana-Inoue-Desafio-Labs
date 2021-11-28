@@ -96,9 +96,9 @@ __________________________
 
 ## Requisitos:
 
-⭐ "/deliveries" Deverá retornar todas as deliveries
-⭐ "/deliverie" Deverá cadastrar novas deliveries
-⭐ "/deliverie/{:id}/" Deverá deletar as delivery por id
+- "/deliveries" Deverá retornar todas as deliveries
+- "/deliverie" Deverá cadastrar novas deliveries
+- "/deliverie/{:id}/" Deverá deletar as delivery por id
 ________________________________________________________________________
 ### FrontEnd 
 
@@ -125,12 +125,12 @@ https://mariana-inoue-database.herokuapp.com/deliveries
 _______________________________________________________________________
 
 Dados para Collection Receitas
-id: autogerado e obrigatório
-nome : AllowNull: false
-endereco: AllowNull: false
-telefone: AllowNull: false
-peso: AllowNull: false
-criadoEm: data gerada automaticamente e obrigatório
+- id: autogerado e obrigatório
+- nome : AllowNull: false
+- endereco: AllowNull: false
+- telefone: AllowNull: false
+- peso: AllowNull: false
+- criadoEm: data gerada automaticamente e obrigatório
 API deve retornar seguinte JSON:
 
       [
