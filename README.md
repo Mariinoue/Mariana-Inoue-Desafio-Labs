@@ -99,7 +99,7 @@ __________________________
 ⭐ "/deliveries" Deverá retornar todas as deliveries
 ⭐ "/deliverie" Deverá cadastrar novas deliveries
 ⭐ "/deliverie/{:id}/" Deverá deletar as delivery por id
-
+________________________________________________________________________
 ### FrontEnd 
 
 ![Captura de tela 2021-11-28 202716](https://user-images.githubusercontent.com/82849390/143790657-4255b4b5-ac0a-4630-bad6-71e9f92be59d.jpg)
@@ -109,11 +109,11 @@ Endpoint Index
 https://mariana-inoue-database.herokuapp.com
 ![Captura de tela 2021-11-28 190938](https://user-images.githubusercontent.com/82849390/143787974-88b8030a-7b0b-4eb6-bb56-dfa028117788.jpg)
 
-Endpoint para mostrar todas as receitas 
+Endpoint para mostrar todas as delivery 
 https://mariana-inoue-database.herokuapp.com/deliveries
 ![Captura de tela 2021-11-28 185828](https://user-images.githubusercontent.com/82849390/143787731-9d63abfa-81a9-43f5-abfd-7223805fb15a.jpg)
 
-Endpoint para cadastras nova receita
+Endpoint para cadastras nova delivery
 https://mariana-inoue-database.herokuapp.com/deliveries
 ![Captura de tela 2021-11-28 190405](https://user-images.githubusercontent.com/82849390/143787831-fae463c0-9daa-4d69-a28e-c669296f61b4.jpg)
 
@@ -136,10 +136,10 @@ API deve retornar seguinte JSON:
       [
           {
               "id": "577",
-              "nome": "Gabriela pires",
+              "nome": "Gabriela ",
               "peso": 6,
-              "endereco": "rua Jureia , 682",
-              "telefone": "11 976858899",
+              "endereco": "rua Jure, 6",
+              "telefone": "11 97685xxxx",
               "createdAt": "2021-11-28T15:36:13.084Z",
               "updatedAt": "2021-11-28T15:36:13.084Z"
           }
