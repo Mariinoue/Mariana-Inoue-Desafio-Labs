@@ -1,0 +1,196 @@
+{
+	"id": "11d1c3fb-d33f-d08e-4d6f-e4c5a5d35fce",
+	"name": "Deliveries",
+	"description": "",
+	"order": [
+		"17355c59-435a-20af-86ef-64762374d8a7",
+		"432b3763-9f9b-7885-9b43-1c628c447cf0",
+		"2654e4fe-2a56-bc23-22a9-24619717c724"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1638137697851,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "17355c59-435a-20af-86ef-64762374d8a7",
+			"headers": "",
+			"headerData": [],
+			"url": "https://mariana-inoue-database.herokuapp.com/deliveries",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1638137951358,
+			"name": "Listar Deliveries",
+			"description": "Listar Deliveries da Database",
+			"collectionId": "11d1c3fb-d33f-d08e-4d6f-e4c5a5d35fce",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 229,
+					"headers": [
+						{
+							"name": "access-control-allow-headers",
+							"key": "access-control-allow-headers",
+							"value": "origin, X-Request-With, Content-Type, Accept",
+							"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+						},
+						{
+							"name": "access-control-allow-origin",
+							"key": "access-control-allow-origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "connection",
+							"key": "connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "content-length",
+							"key": "content-length",
+							"value": "1521",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "content-type",
+							"key": "content-type",
+							"value": "application/json; charset=utf-8",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "date",
+							"key": "date",
+							"value": "Sun, 28 Nov 2021 22:49:39 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "etag",
+							"key": "etag",
+							"value": "W/\"5f1-anM8TdpkgBwNym+MceibUE7R+7w\"",
+							"description": "An identifier for a specific version of a resource, often a message digest"
+						},
+						{
+							"name": "server",
+							"key": "server",
+							"value": "Cowboy",
+							"description": "A name for the server"
+						},
+						{
+							"name": "via",
+							"key": "via",
+							"value": "1.1 vegur",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"name": "x-powered-by",
+							"key": "x-powered-by",
+							"value": "Express",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "[{\"id\":\"577\",\"nome\":\"Gabriela pires\",\"peso\":6,\"endereco\":\"rua Jureia , 682\",\"telefone\":\"11 976858899\",\"createdAt\":\"2021-11-28T15:36:13.084Z\",\"updatedAt\":\"2021-11-28T15:36:13.084Z\"},{\"id\":\"602\",\"nome\":\"Pedro Moraes\",\"peso\":52,\"endereco\":\"Rua Sumare\",\"telefone\":\"Rua Sumare\",\"createdAt\":\"2021-11-28T20:29:29.485Z\",\"updatedAt\":\"2021-11-28T20:29:29.485Z\"},{\"id\":\"608\",\"nome\":\"Carlos Eduardo de Andrade\",\"peso\":0.5,\"endereco\":\"R. Emb. João Neves da Fontoura, 1000\",\"telefone\":\"11 96588985\",\"createdAt\":\"2021-11-28T21:11:44.312Z\",\"updatedAt\":\"2021-11-28T21:11:44.312Z\"},{\"id\":\"610\",\"nome\":\"José Lima Sobrinho\",\"peso\":0.5,\"endereco\":\"Av. Braz Leme, 304\",\"telefone\":\"11 96589690\",\"createdAt\":\"2021-11-28T22:23:19.769Z\",\"updatedAt\":\"2021-11-28T22:23:19.769Z\"},{\"id\":\"605\",\"nome\":\"Larissa de Macedo Machado\",\"peso\":5,\"endereco\":\"R. Voluntários da Pátria, 338\",\"telefone\":\"11 9656820\",\"createdAt\":\"2021-11-28T21:08:01.720Z\",\"updatedAt\":\"2021-11-28T21:08:01.720Z\"},{\"id\":\"611\",\"nome\":\"Maria\",\"peso\":5,\"endereco\":\"rua das garças, 12\",\"telefone\":\"11 232393\",\"createdAt\":\"2021-11-28T22:49:09.468Z\",\"updatedAt\":\"2021-11-28T22:49:09.468Z\"},{\"id\":\"606\",\"nome\":\"Roobertchay Domingues da Rocha Filho\",\"peso\":9,\"endereco\":\"R. Santa Eulália, 38\",\"telefone\":\"11 9656820\",\"createdAt\":\"2021-11-28T21:09:12.347Z\",\"updatedAt\":\"2021-11-28T21:09:12.347Z\"},{\"id\":\"607\",\"nome\":\"José Lima Sobrinho\",\"peso\":0.5,\"endereco\":\"Av. Braz Leme, 304\",\"telefone\":\"11 96589690\",\"createdAt\":\"2021-11-28T21:10:25.526Z\",\"updatedAt\":\"2021-11-28T21:10:25.526Z\"}]",
+					"language": "json",
+					"rawDataType": "text",
+					"previewType": "text",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"name": "Listar Deliveries",
+					"id": "ed7eecf8-8817-1e1a-652a-36c58976da3a",
+					"request": {
+						"url": "https://mariana-inoue-database.herokuapp.com/deliveries",
+						"pathVariables": {},
+						"pathVariableData": [],
+						"queryParams": [],
+						"headerData": [],
+						"headers": "",
+						"data": null,
+						"method": "GET",
+						"dataMode": "params"
+					}
+				}
+			]
+		},
+		{
+			"id": "2654e4fe-2a56-bc23-22a9-24619717c724",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://mariana-inoue-database.herokuapp.com/deliveries",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "11d1c3fb-d33f-d08e-4d6f-e4c5a5d35fce",
+			"data": [],
+			"dataMode": "raw",
+			"name": "Listar Deliveries",
+			"description": "Listar Deliveries da Database",
+			"descriptionFormat": "html",
+			"time": 1638140040686,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n        \n        \"nome\": \"Gabriela pires\",\n        \"peso\": 6,\n        \"endereco\": \"rua Jureia , 682\",\n        \"telefone\": \"11 976858899\"\n    }\n\n\n"
+		},
+		{
+			"id": "432b3763-9f9b-7885-9b43-1c628c447cf0",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "https://mariana-inoue-database.herokuapp.com/deliveries/611",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "11d1c3fb-d33f-d08e-4d6f-e4c5a5d35fce",
+			"data": null,
+			"dataMode": "params",
+			"name": "Deletar delivery por id ",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1638140017118,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
