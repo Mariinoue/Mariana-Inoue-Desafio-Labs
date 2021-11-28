@@ -62,9 +62,35 @@ __________________________
           |- 📄 package.json
           |- 📄 server.js
           |- 📄 .env
-
-
-
+          📁 postman
+          |   |
+          |   |- 📄 deliveries.postman_collection.json
+          
+          
+          📁 frontend-labs
+          |
+          |-  📁 css
+          |    |
+          |    |- 📄 style.css
+          |
+          |         
+          |    |- 📁 js
+          |         |- 📄 index.js
+          |         
+          |
+          |    |- 📁 assets
+          |         |- 📄 github-icon.png
+          |         |- 📄 linkedin-icon.png
+          |
+          |    
+          |    |- 📄 index.html 
+          |
+          |
+          |    |- 📄 app.js  
+          |
+          📄 README.md  
+          
+         
 
 
 
@@ -73,6 +99,10 @@ __________________________
 ⭐ "/deliveries" Deverá retornar todas as deliveries
 ⭐ "/deliverie" Deverá cadastrar novas deliveries
 ⭐ "/deliverie/{:id}/" Deverá deletar as delivery por id
+
+### FrontEnd 
+
+![Captura de tela 2021-11-28 202716](https://user-images.githubusercontent.com/82849390/143790657-4255b4b5-ac0a-4630-bad6-71e9f92be59d.jpg)
 
 ### Deploy realizado na plataforma nuvem Heroku
 Endpoint Index
