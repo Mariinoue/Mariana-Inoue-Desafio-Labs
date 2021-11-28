@@ -34,7 +34,7 @@ function preencherDados(lista) {
     let linha = document.createElement("tr")
     let itemDaLinhaId = document.createElement("td")
     itemDaLinhaId.innerText = element.id
-    let itemDaLinhaNome = document.createElement("td");
+    let itemDaLinhaNome = document.createElement("td")
     itemDaLinhaNome.innerText = element.nome
     let itemDaLinhaEndereco = document.createElement("td")
     itemDaLinhaEndereco .innerText = element.endereco
