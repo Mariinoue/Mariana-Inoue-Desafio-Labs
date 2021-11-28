@@ -88,7 +88,7 @@ https://mariana-inoue-database.herokuapp.com/deliveries
 ![Captura de tela 2021-11-28 190405](https://user-images.githubusercontent.com/82849390/143787831-fae463c0-9daa-4d69-a28e-c669296f61b4.jpg)
 
 Endpoint deletar delivery por {:id}
-https://mariana-inoue-database.herokuapp.com/deliveries/{:id}
+https://mariana-inoue-database.herokuapp.com/deliveries
 ![Captura de tela 2021-11-28 190630](https://user-images.githubusercontent.com/82849390/143787891-0964dfff-1e95-4188-a465-4bcece9fe1fd.jpg)
 
 
