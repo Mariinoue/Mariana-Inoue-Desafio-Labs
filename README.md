@@ -77,19 +77,20 @@ __________________________
 ### Deploy realizado na plataforma nuvem Heroku
 Endpoint Index
 https://mariana-inoue-database.herokuapp.com
-![IndexReceitas](https://user-images.githubusercontent.com/82849390/132223760-e734f993-3239-4f60-a726-5aba0087d29e.gif)
+![Captura de tela 2021-11-28 190938](https://user-images.githubusercontent.com/82849390/143787974-88b8030a-7b0b-4eb6-bb56-dfa028117788.jpg)
 
 Endpoint para mostrar todas as receitas 
 https://mariana-inoue-database.herokuapp.com/deliveries
-![getAllReceitas](https://user-images.githubusercontent.com/82849390/132224291-00ac57d7-ca37-4e20-9332-7b7537ae7b09.gif)
+![Captura de tela 2021-11-28 185828](https://user-images.githubusercontent.com/82849390/143787731-9d63abfa-81a9-43f5-abfd-7223805fb15a.jpg)
 
 Endpoint para cadastras nova receita
 https://mariana-inoue-database.herokuapp.com/deliveries
-![postNovaReceitas](https://user-images.githubusercontent.com/82849390/132225963-bb8ff4b8-212e-4dbc-bd20-2b4ffd390bd8.gif)
+![Captura de tela 2021-11-28 190405](https://user-images.githubusercontent.com/82849390/143787831-fae463c0-9daa-4d69-a28e-c669296f61b4.jpg)
 
 Endpoint deletar delivery por {:id}
-https://mariana-inoue-database.herokuapp.com/deliveries
-![deleteReceitas](https://user-images.githubusercontent.com/82849390/132226266-b155f6ca-3bfe-47c7-a050-76511a9ad8b3.gif)
+https://mariana-inoue-database.herokuapp.com/deliveries/{:id}
+![Captura de tela 2021-11-28 190630](https://user-images.githubusercontent.com/82849390/143787891-0964dfff-1e95-4188-a465-4bcece9fe1fd.jpg)
+
 
 _______________________________________________________________________
 
