@@ -13,7 +13,7 @@ function getDelivery() {
     .catch((erro) => console.error(erro))
 }
 
-getDelivery();
+getDelivery()
 
 function favoriteDelivery() {}
 
@@ -21,34 +21,26 @@ var listing_table = document.getElementById('tabela-lista-corpo')
 
 listing_table.innerHTML = ""
 
-function createButtonFavorite(favorite) {
-  const buttonFav = document.createElement("button")
-  let favoriteIcon = document.createElement("i")
-  favoriteIcon.className = "far fa-star"
-  buttonFav.innerHTML = favoriteIcon
-  document.body.appendChild(buttonFav)
-}
-
 function preencherDados(lista) {
   lista.forEach((element, index) => {
-    let linha = document.createElement("tr")
-    let itemDaLinhaId = document.createElement("td")
+    let linha = document.createElement('tr')
+    let itemDaLinhaId = document.createElement('td')
     itemDaLinhaId.innerText = element.id
-    let itemDaLinhaNome = document.createElement("td")
+    let itemDaLinhaNome = document.createElement('td')
     itemDaLinhaNome.innerText = element.nome
-    let itemDaLinhaEndereco = document.createElement("td")
+    let itemDaLinhaEndereco = document.createElement('td')
     itemDaLinhaEndereco .innerText = element.endereco
-    let itemDaLinhaTelefone = document.createElement("td")
-    itemDaLinhaTelefone.innerText = element.telefone;
-    let itemDaLinhaPeso = document.createElement("td")
+    let itemDaLinhaTelefone = document.createElement('td')
+    itemDaLinhaTelefone.innerText = element.telefone
+    let itemDaLinhaPeso = document.createElement('td')
     itemDaLinhaPeso.innerHTML = element.peso
-    let itemDaLinhaDelete = document.createElement("td")
+    let itemDaLinhaDelete = document.createElement('td')
 
 
   const btnAdd = document.getElementById('btnAddCadastro')
     btnAdd.addEventListener('click', (e) => {
     e.preventDefault()
-        fetch(`${URL}`, {
+        fetch(URL, {
             method: 'POST',
             body: JSON.stringify({ 
             nome: nomeInput.value,
@@ -67,8 +59,7 @@ function preencherDados(lista) {
         .then(function(data){
             console.log(data)
         })
-        .then(() => location.reload())
-      
+        .catch((erro) => console.error(erro))
     })
  
 
@@ -79,15 +70,16 @@ function preencherDados(lista) {
       })
         .then((resposta) => resposta.json())
         .then((data) => {
-          var i = this.parentNode.parentNode.rowIndex;
+          console.log(data)
+          var i = this.parentNode.parentNode.rowIndex
           document.getElementById("tabela-lista").deleteRow(i)
         })
         .catch((erro) => console.error(erro))
-    });
+    })
 
-    let deleteIcon = document.createElement("i")
-    deleteIcon.className = "far fa-trash-alt"
-    buttonDel.appendChild(deleteIcon);
+    let deleteIcon = document.createElement('i')
+    deleteIcon.className = 'far fa-trash-alt'
+    buttonDel.appendChild(deleteIcon)
     itemDaLinhaDelete.appendChild(buttonDel)
 
     linha.appendChild(itemDaLinhaId)
